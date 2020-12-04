@@ -44,9 +44,7 @@ $result = mysqli_query($conn, "SELECT * FROM users");
 
 
 <?php
-//Set the password
-$password = "12345678"; 
-//Let the user access protected content on page if the password match with the password that you have provided
+$password = "password"; 
 if (isset($_POST["password"]) && ($_POST["password"]=="$password")) { ?>
   <a style="color: green;">
   
@@ -78,9 +76,7 @@ while ($row = mysqli_fetch_array($result))
 <div>
 </a>
 <?php }
-//Display this content if the provided password is wrong
 else{ 
-//Show the wrong password notice
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     ?>
     <h2 style="color: red;">if you dont know! them am too</h2>
